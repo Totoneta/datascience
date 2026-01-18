@@ -1,0 +1,44 @@
+# IMPORTACIONES
+import pandas as pd
+import nunpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+########## PANDAS ########## 
+
+df.head(n°) - Muestra los primeros ejemplos
+df.sample(n°, random_state=n°) - Muestra los ejemplos aleatorios(random asegura que siempre sea la misma muestra de datos)
+df.shape - filas, col
+df.info() - nulls count and df lit descr
+df.isna().sum() - suma valoresnull de las cols
+df.describe() - saca la mediana, porcentajes, maximo, estandar, etc
+df.algo.T - Invierte filas y cols
+
+df.columna.unique() - Que opciones se podrian colocar en esa col
+
+df.columns - muestra las columnas
+df.drop(columns=["nombrecol"]) - Eliminar columna
+df.columna.value_counts() - retorna cantidad de cada opcion
+
+df = df.read_csv("Ruta C:/... .csv") - Lee un archivo
+df.to_csv("ruta C:/... .csv") - guardar el archivo procesado
+
+########## MATPLOTLIB ########## 
+
+plt.figure(figsize=(10,6)) - tamaño y creacion de lienzo
+plt.show() - Muestra el gráfico
+plt.title("Título") - Título de gráfico
+plt.ylabel("...") -- cambias las etiquetas y
+plt.xlabel("...") -- cambias las etiquetas x
+
+/////////////////////////// Gráficos /////////////////////////// 
+* pasar datos en "dato" -- ej:df.value_count() 
+
+plt.pie(dato, labels=dato.index) - Grafico de torta con titulo basado en el index de dato
+
+########## SEABORN ########## 
+
+sns.countplot(data=df, x="nombrecolumna", hue="otracolumna") -- Grafica en barras por columna (hue, comparativa con otra col)
+sns.histplot(data=df, x="nombrecolumna", bins=n°, kde=True) -- Grafica en historigrama (bins, cantidad de barras/kde, linea promedio)
+sns.boxplot(data=df) -- Grafica en cajas y ejes
+sns.scatterplot(data=df,  x="nombrecolumna", y="nombrecolumna") -- Grafico de puntos
