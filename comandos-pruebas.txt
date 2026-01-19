@@ -1,8 +1,20 @@
+.ipynb
 # IMPORTACIONES
 import pandas as pd
 import nunpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+########## TEORIA ########## 
+Cuando la distribcion es uniforme: variable con misma cant de poroblabilidad(Barras de misma altura en una variable)
+
+Cuando la distribucion es normal: campana de gauss
+zscore = dato de variable - la media / desvio 
+	-- Cuantos desvios encuentra respecto a ese dato de variable
+	-- Si es 0 esta centrado en el promedio
+	-- En 3 desvios tenemos 99,73% de probabilidad
+	-- Valor mayor que 3 te da demaciada dispercion en los outliners
+
 
 ########## PANDAS ########## 
 
@@ -11,10 +23,11 @@ df.sample(n°, random_state=n°) - Muestra los ejemplos aleatorios(random asegur
 df.shape - filas, col
 df.info() - nulls count and df lit descr
 df.isna().sum() - suma valoresnull de las cols
-df.describe() - saca la mediana, porcentajes, maximo, estandar, etc
+df.columna.describe() - saca la media, la mediana, moda, percentiles, minimo, maximo y desvio
 df.algo.T - Invierte filas y cols
+df.select_dtypes(include=[np.number]) - Retorna las cols con tipo numero, y por usar nunpy, no hace falta aclarar si float,int,etc
 
-df.columna.unique() - Que opciones se podrian colocar en esa col
+df.columna.unique() - Que opciones se podrian colocar en esa col 
 
 df.columns - muestra las columnas
 df.drop(columns=["nombrecol"]) - Eliminar columna
@@ -23,11 +36,13 @@ df.columna.value_counts() - retorna cantidad de cada opcion
 df = df.read_csv("Ruta C:/... .csv") - Lee un archivo
 df.to_csv("ruta C:/... .csv") - guardar el archivo procesado
 
+df.corr() -- Retorna la matrix
+
 ########## MATPLOTLIB ########## 
 
 plt.figure(figsize=(10,6)) - tamaño y creacion de lienzo
 plt.show() - Muestra el gráfico
-plt.title("Título") - Título de gráfico
+plt.title("... ") - Título de gráfico
 plt.ylabel("...") -- cambias las etiquetas y
 plt.xlabel("...") -- cambias las etiquetas x
 
@@ -38,7 +53,148 @@ plt.pie(dato, labels=dato.index) - Grafico de torta con titulo basado en el inde
 
 ########## SEABORN ########## 
 
-sns.countplot(data=df, x="nombrecolumna", hue="otracolumna") -- Grafica en barras por columna (hue, comparativa con otra col)
-sns.histplot(data=df, x="nombrecolumna", bins=n°, kde=True) -- Grafica en historigrama (bins, cantidad de barras/kde, linea promedio)
-sns.boxplot(data=df) -- Grafica en cajas y ejes
-sns.scatterplot(data=df,  x="nombrecolumna", y="nombrecolumna") -- Grafico de puntos
+sns.countplot(
+data=df, 
+x="nombrecolumna", 
+hue="otracolumna") -- Grafico de barras por columna (hue, comparativa con otra col)
+#Comparativa de x=cualitativo e y=cuantitativo, entre 2 o mas variables
+
+sns.histplot(
+data=df,
+x="nombrecolumna", 
+bins=n°, 
+kde=True) -- Grafica historigrama (bins, cantidad de barras/kde, linea promedio)
+#Compara una variable a lo largo del tiempo
+
+sns.boxplot(
+data=df) -- Grafica en cajas y vigotes
+#Comparativa de x=cualitativa e y=cuantitativa/nada, de 1 variable y sus outliners
+
+sns.scatterplot(
+data=df,  
+x="nombrecolumna", 
+y="nombrecolumna") -- Grafico de puntos
+#Comparativa x=cuantitativa e y=cuantitativa, entre dos variables
+
+sns.heatmap(
+data)
+#Muestra las relaciones entre variables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
