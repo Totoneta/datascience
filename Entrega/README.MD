@@ -2,7 +2,7 @@
 El conjunto de datos utilizado corresponde a publicaciones de vehículos usados, que incluye información como precio, año de registro, marca, modelo, kilometraje, tipo de combustible, tipo de vehículo y potencia del motor, entre otras variables.
 Para el desarrollo de este proyecto se seleccionó una muestra de 50000 registros, con el objetivo de realizar un análisis exploratorio y visualización de datos.
 
-- Variables numéricas
+- Variables numéricas iniciales
 Price
 YearOfRegistration
 Kilometer
@@ -10,7 +10,7 @@ PowerPS
 PostalCode
 MonthOfRegistration
 
-- Variables categóricas
+- Variables categóricas iniciales
 Brand
 Model
 VehicleType
@@ -20,6 +20,8 @@ NotRepairedDamage
 Seller
 OfferType
 Abtest
+###### LAS VARIABLES FUERON ACTUALIZADAS PARA QUE EL MODELO SE PUEDA DESARROLLAR Y APRENDER CORRECTAMENTE, SE UTILIZO ONE HOT ENCODING PARA SU TRANSFORMACION A INT #####
+##### ALGUNAS VARIABLES QUE NO ERAN IMPORTANTES PARA PREDECIR EL PRECIO #####
 
 # Objetivo general
 Analizar los factores que influyen en el precio de los vehículos usados mediante técnicas de análisis exploratorio de datos y visualización, utilizando Python y las librerías pandas, numpy, matplotlib y seaborn, con el fin de identificar patrones relevantes que permitan sentar las bases para un modelo predictivo de precios.
